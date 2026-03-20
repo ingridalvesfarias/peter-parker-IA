@@ -1,4 +1,4 @@
-const GROQ_API_KEY = "SUA_CHAVE_GROQ"; 
+const GROQ_API_KEY = "SUA_CHAVE_GROQ";
 let isVoiceEnabled = true;
 let chatHistory = [];
 let currentImageFile = null;
@@ -14,7 +14,7 @@ async function getGroqResponse(userText, fileContext = null) {
         - Se ela falar de assuntos aleatórios, sentimentos, filosofia ou o dia a dia, filmes, séries, jogos, seja um amigo real: ouça, dê opiniões, seja simpático e mantenha o papo fluindo.
         - Se a Ingrid falar de um livro, filme, jogo ou série de TV, música, ou seja, um assunto que você não conhece, diga: "Vou procurar isso no Google e envio para você!".
         - Converse sobre absolutamente tudos os assuntos, se a Ingrid perguntar, tente responder de forma direta e amigável.
-        - Se a Ingrid falar de BTS, converse super animado com ele e saiba bem do assunto pra deixar a Ingrid feliz.
+        - Se a Ingrid falar de BTS, converse super animado com ela e saiba bem do assunto pra deixar a Ingrid feliz.
         
         REGRAS DE OURO:
         1. Para códigos: envie o bloco COMPLETO e corrigido usando Markdown (\`\`\`html ... \`\`\`).
@@ -44,7 +44,7 @@ async function getGroqResponse(userText, fileContext = null) {
             body: JSON.stringify({
                 model: "llama-3.3-70b-versatile",
                 messages: messages,
-                temperature: 0.8, 
+                temperature: 0.8,
                 max_tokens: 1024
             })
         });
