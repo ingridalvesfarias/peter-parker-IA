@@ -23,7 +23,7 @@ A interface conta com um campo de input estilizado, suporte a mensagens dinâmic
 
 ## ✒️ Autoria
 
-* **Desenvolvedora:** Ingrid
+* **Desenvolvedora:** Ingrid Farias
 * **Projeto:** Peter IA Web
 
 ---
