@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Parker AI</title>
+    <link rel="shortcut icon" href="./img/spiderman-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="gemini-container-pro">
+        <header class="mini-header-pro">
+            <div class="user-profile">
+                <img src="./img/peter.jpg" alt="Peter" class="avatar-img-pro">
+                <div class="online-indicator"></div>
+            </div>
+            <button id="voiceToggle" class="mute-btn-pro" onclick="toggleVoice()">
+                <span id="voiceIcon">🔊</span>
+            </button>
+        </header>
+
+        <main class="chat-flow-pro" id="chatWindow">
+            <div class="msg ai-msg-pro">Oi Ingrid. Como posso te ajudar hoje?</div>
+        </main>
+
+        <input type="file" id="fileInput" style="display: none;" onchange="handleFileSelect(this)">
+
+        <footer class="input-area-pro">
+            
+            <div id="attachmentMenu" class="attachment-menu-pro">
+                <button class="menu-item-pro" onclick="triggerFileSelect()">📎 Enviar arquivos</button>
+                <button class="menu-item-pro" onclick="triggerFileSelect()">☁️ Adicionar do Drive</button>
+                <button class="menu-item-pro" onclick="triggerFileSelect()">🖼️ Fotos</button>
+            </div>
+
+            <div id="imagePreviewContainer" class="image-preview-container-pro" style="display: none;">
+                <img id="previewImageThumbnail" class="preview-thumbnail-pro" src="" alt="Thumbnail">
+                <span id="previewImageCaption" class="preview-caption-pro"></span>
+                <button class="remove-preview-btn-pro" onclick="removeImagePreview()">✕</button>
+            </div>
+
+            <div class="input-pill-pro">
+                <button class="plus-btn-pro" id="plusBtn" onclick="toggleAttachmentMenu()">+</button>
+
+                <textarea id="userInput" placeholder="Peça ao Peter IA..." rows="1"></textarea>
+
+                <div class="pill-actions-pro">
+                    <button class="mic-btn-action-pro" onclick="startSpeechRecognition()">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                            <line x1="12" y1="19" x2="12" y2="23"></line>
+                            <line x1="8" y1="23" x2="16" y2="23"></line>
+                        </svg>
+                    </button>
+                    
+                    <button class="send-btn-action-pro" onclick="sendMessage()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
